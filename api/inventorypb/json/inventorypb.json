@@ -1329,6 +1329,12 @@
                   "type": "string",
                   "x-order": 13
                 },
+                "auto_discovery_limit": {
+                  "description": "Limit for auto discovery.",
+                  "type": "integer",
+                  "format": "int32",
+                  "x-order": 15
+                },
                 "custom_labels": {
                   "description": "Custom user-assigned labels.",
                   "type": "object",
@@ -1432,6 +1438,12 @@
                       "description": "Unique randomly generated instance identifier.",
                       "type": "string",
                       "x-order": 0
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
                     },
                     "custom_labels": {
                       "description": "Custom user-assigned labels.",
@@ -4406,6 +4418,12 @@
                       "type": "string",
                       "x-order": 0
                     },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
+                    },
                     "custom_labels": {
                       "description": "Custom user-assigned labels.",
                       "type": "object",
@@ -6570,6 +6588,12 @@
                       "type": "string",
                       "x-order": 0
                     },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
+                    },
                     "custom_labels": {
                       "description": "Custom user-assigned labels.",
                       "type": "object",
@@ -8167,6 +8191,12 @@
                         "description": "Unique randomly generated instance identifier.",
                         "type": "string",
                         "x-order": 0
+                      },
+                      "auto_discovery_limit": {
+                        "description": "Auto discovery limit.",
+                        "type": "integer",
+                        "format": "int32",
+                        "x-order": 14
                       },
                       "custom_labels": {
                         "description": "Custom user-assigned labels.",

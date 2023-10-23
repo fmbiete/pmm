@@ -1241,6 +1241,9 @@ type ListServicesOKBodyServicesItems0AgentsItems0PostgresqlOptions struct {
 
 	// True if TLS key is set.
 	IsSslKeySet bool `json:"is_ssl_key_set,omitempty"`
+
+	// PostgreSQL auto discovery database limit.
+	AutoDiscoveryLimit int32 `json:"auto_discovery_limit,omitempty"`
 }
 
 // Validate validates this list services OK body services items0 agents items0 postgresql options

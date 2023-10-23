@@ -2720,6 +2720,12 @@
                     "debug"
                   ],
                   "x-order": 14
+                },
+                "auto_discovery_limit": {
+                  "description": "Limit for auto discovery.",
+                  "type": "integer",
+                  "format": "int32",
+                  "x-order": 15
                 }
               }
             }
@@ -2830,6 +2836,12 @@
                         "debug"
                       ],
                       "x-order": 13
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
                     }
                   },
                   "x-order": 0
@@ -5803,6 +5815,12 @@
                         "debug"
                       ],
                       "x-order": 13
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
                     }
                   },
                   "x-order": 0
@@ -7854,6 +7872,12 @@
                         "debug"
                       ],
                       "x-order": 13
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
                     }
                   },
                   "x-order": 5
@@ -9449,6 +9473,12 @@
                           "debug"
                         ],
                         "x-order": 13
+                      },
+                      "auto_discovery_limit": {
+                        "description": "Auto discovery limit.",
+                        "type": "integer",
+                        "format": "int32",
+                        "x-order": 14
                       }
                     }
                   },
@@ -19057,6 +19087,12 @@
                         "debug"
                       ],
                       "x-order": 13
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
                     }
                   },
                   "x-order": 1
@@ -20520,6 +20556,12 @@
                         "debug"
                       ],
                       "x-order": 13
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Auto discovery limit.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 14
                     }
                   },
                   "x-order": 7
