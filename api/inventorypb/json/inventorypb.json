@@ -11869,6 +11869,12 @@
                   "type": "string",
                   "x-order": 2
                 },
+                "auto_discovery_limit": {
+                  "description": "Limit for auto discovery.",
+                  "type": "integer",
+                  "format": "int32",
+                  "x-order": 9
+                },
                 "cluster": {
                   "description": "Cluster name.",
                   "type": "string",
@@ -11931,6 +11937,12 @@
                       "description": "Access address (DNS name or IP).\nAddress (and port) or socket is required.",
                       "type": "string",
                       "x-order": 4
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Limit for auto discovery.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 11
                     },
                     "cluster": {
                       "description": "Cluster name.",
@@ -12685,6 +12697,12 @@
                       "type": "string",
                       "x-order": 4
                     },
+                    "auto_discovery_limit": {
+                      "description": "Limit for auto discovery.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 11
+                    },
                     "cluster": {
                       "description": "Cluster name.",
                       "type": "string",
@@ -13130,6 +13148,12 @@
                         "description": "Access address (DNS name or IP).\nAddress (and port) or socket is required.",
                         "type": "string",
                         "x-order": 4
+                      },
+                      "auto_discovery_limit": {
+                        "description": "Limit for auto discovery.",
+                        "type": "integer",
+                        "format": "int32",
+                        "x-order": 11
                       },
                       "cluster": {
                         "description": "Cluster name.",

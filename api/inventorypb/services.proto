@@ -100,6 +100,8 @@ message PostgreSQLService {
   string replication_set = 8;
   // Custom user-assigned labels.
   map<string, string> custom_labels = 9;
+  // Limit for auto discovery.
+  int32 auto_discovery_limit = 12;
 }
 
 // ProxySQLService represents a generic ProxySQL instance.
@@ -295,6 +297,8 @@ message AddPostgreSQLServiceRequest {
   string replication_set = 7;
   // Custom user-assigned labels.
   map<string, string> custom_labels = 8;
+  // Limit for auto discovery.
+  int32 auto_discovery_limit = 10;
 }
 
 message AddPostgreSQLServiceResponse {

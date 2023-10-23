@@ -16063,6 +16063,12 @@
                     "type": "string"
                   },
                   "x-order": 8
+                },
+                "auto_discovery_limit": {
+                  "description": "Limit for auto discovery.",
+                  "type": "integer",
+                  "format": "int32",
+                  "x-order": 9
                 }
               }
             }
@@ -16136,6 +16142,12 @@
                         "type": "string"
                       },
                       "x-order": 10
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Limit for auto discovery.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 11
                     }
                   },
                   "x-order": 0
@@ -16794,6 +16806,12 @@
                         "type": "string"
                       },
                       "x-order": 10
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Limit for auto discovery.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 11
                     }
                   },
                   "x-order": 2
@@ -17234,6 +17252,12 @@
                           "type": "string"
                         },
                         "x-order": 10
+                      },
+                      "auto_discovery_limit": {
+                        "description": "Limit for auto discovery.",
+                        "type": "integer",
+                        "format": "int32",
+                        "x-order": 11
                       }
                     }
                   },
@@ -27748,6 +27772,12 @@
                     "debug"
                   ],
                   "x-order": 29
+                },
+                "auto_discovery_limit": {
+                  "description": "Limit for auto discovery.",
+                  "type": "integer",
+                  "format": "int32",
+                  "x-order": 30
                 }
               }
             }
@@ -27821,6 +27851,12 @@
                         "type": "string"
                       },
                       "x-order": 10
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Limit for auto discovery.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 11
                     }
                   },
                   "x-order": 0
@@ -29290,6 +29326,12 @@
                         "type": "string"
                       },
                       "x-order": 10
+                    },
+                    "auto_discovery_limit": {
+                      "description": "Limit for auto discovery.",
+                      "type": "integer",
+                      "format": "int32",
+                      "x-order": 11
                     }
                   },
                   "x-order": 6

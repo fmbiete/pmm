@@ -1290,6 +1290,9 @@ type AddRDSOKBodyPostgresql struct {
 
 	// Custom user-assigned labels.
 	CustomLabels map[string]string `json:"custom_labels,omitempty"`
+
+	// Limit for auto discovery.
+	AutoDiscoveryLimit int32 `json:"auto_discovery_limit,omitempty"`
 }
 
 // Validate validates this add RDS OK body postgresql

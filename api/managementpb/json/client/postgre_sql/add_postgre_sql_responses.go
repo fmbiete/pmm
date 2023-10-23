@@ -220,6 +220,9 @@ type AddPostgreSQLBody struct {
 	// Enum: [auto fatal error warn info debug]
 	LogLevel *string `json:"log_level,omitempty"`
 
+	// Limit for auto discovery.
+	AutoDiscoveryLimit int32 `json:"auto_discovery_limit,omitempty"`
+
 	// add node
 	AddNode *AddPostgreSQLParamsBodyAddNode `json:"add_node,omitempty"`
 }
@@ -1447,6 +1450,9 @@ type AddPostgreSQLOKBodyService struct {
 
 	// Custom user-assigned labels.
 	CustomLabels map[string]string `json:"custom_labels,omitempty"`
+
+	// Limit for auto discovery.
+	AutoDiscoveryLimit int32 `json:"auto_discovery_limit,omitempty"`
 }
 
 // Validate validates this add postgre SQL OK body service

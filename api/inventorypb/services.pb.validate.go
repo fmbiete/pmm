@@ -318,6 +318,8 @@ func (m *PostgreSQLService) validate(all bool) error {
 
 	// no validation rules for CustomLabels
 
+	// no validation rules for AutoDiscoveryLimit
+
 	if len(errors) > 0 {
 		return PostgreSQLServiceMultiError(errors)
 	}
@@ -2429,6 +2431,8 @@ func (m *AddPostgreSQLServiceRequest) validate(all bool) error {
 	// no validation rules for ReplicationSet
 
 	// no validation rules for CustomLabels
+
+	// no validation rules for AutoDiscoveryLimit
 
 	if len(errors) > 0 {
 		return AddPostgreSQLServiceRequestMultiError(errors)
