@@ -54,18 +54,21 @@ type PostgreSQLOptionsParams interface {
 	GetTlsCa() string
 	GetTlsCert() string
 	GetTlsKey() string
+	GetAutoDiscoveryLimit() int32
 }
 
 // PostgreSQLOptionsFromRequest creates PostgreSQLOptions object from request.
 func PostgreSQLOptionsFromRequest(params PostgreSQLOptionsParams) *PostgreSQLOptions {
-	if params.GetTlsCa() != "" || params.GetTlsCert() != "" || params.GetTlsKey() != "" {
-		return &PostgreSQLOptions{
-			SSLCa:   params.GetTlsCa(),
-			SSLCert: params.GetTlsCert(),
-			SSLKey:  params.GetTlsKey(),
-		}
+	res := &PostgreSQLOptions{
+		AutoDiscoveryLimit: params.GetAutoDiscoveryLimit(),
 	}
-	return nil
+	if params.GetTlsCa() != "" || params.GetTlsCert() != "" || params.GetTlsKey() != "" {
+		res.SSLCa = params.GetTlsCa()
+		res.SSLCert = params.GetTlsCert()
+		res.SSLKey = params.GetTlsKey()
+	}
+
+	return res
 }
 
 // MongoDBOptionsParams contains methods to create MongoDBOptions object.
