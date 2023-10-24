@@ -19359,6 +19359,12 @@
                             "description": "True if TLS key is set.",
                             "type": "boolean",
                             "x-order": 2
+                          },
+                          "auto_discovery_limit": {
+                            "description": "Limit for auto discovery.",
+                            "type": "integer",
+                            "format": "int32",
+                            "x-order": 3
                           }
                         },
                         "x-order": 17
@@ -31350,6 +31356,12 @@
                                   "description": "True if TLS key is set.",
                                   "type": "boolean",
                                   "x-order": 2
+                                },
+                                "auto_discovery_limit": {
+                                  "description": "Limit for auto discovery.",
+                                  "type": "integer",
+                                  "format": "int32",
+                                  "x-order": 3
                                 }
                               },
                               "x-order": 17

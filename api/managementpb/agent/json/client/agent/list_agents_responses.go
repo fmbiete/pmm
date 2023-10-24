@@ -883,6 +883,9 @@ type ListAgentsOKBodyAgentsItems0MysqlOptions struct {
 
 	// True if TLS key is set.
 	IsTLSKeySet bool `json:"is_tls_key_set,omitempty"`
+
+	// Limit for auto discovery.
+	AutoDiscoveryLimit int32 `json:"auto_discovery_limit,omitempty"`
 }
 
 // Validate validates this list agents OK body agents items0 mysql options

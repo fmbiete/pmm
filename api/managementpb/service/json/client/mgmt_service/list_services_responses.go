@@ -1198,6 +1198,9 @@ type ListServicesOKBodyServicesItems0AgentsItems0MysqlOptions struct {
 
 	// True if TLS key is set.
 	IsTLSKeySet bool `json:"is_tls_key_set,omitempty"`
+
+	// Limit for auto discovery.
+	AutoDiscoveryLimit int32 `json:"auto_discovery_limit,omitempty"`
 }
 
 // Validate validates this list services OK body services items0 agents items0 mysql options

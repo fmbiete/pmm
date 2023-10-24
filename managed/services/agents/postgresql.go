@@ -30,8 +30,9 @@ import (
 )
 
 var (
-	postgresExporterAutodiscoveryVersion = version.MustParse("2.15.99")
-	postgresExporterWebConfigVersion     = version.MustParse("2.30.99")
+	postgresExporterAutodiscoveryVersion      = version.MustParse("2.15.99")
+	postgresExporterAutodiscoveryLimitVersion = version.MustParse("2.40.99")
+	postgresExporterWebConfigVersion          = version.MustParse("2.30.99")
 )
 
 // postgresExporterConfig returns desired configuration of postgres_exporter process.
@@ -64,6 +65,10 @@ func postgresExporterConfig(service *models.Service, exporter *models.Agent, red
 		args = append(args,
 			"--auto-discover-databases",
 			"--exclude-databases=template0,template1,postgres,cloudsqladmin,pmm-managed-dev,azure_maintenance,rdsadmin")
+	}
+
+	if !pmmAgentVersion.Less(postgresExporterAutodiscoveryLimitVersion) && exporter.PostgreSQLOptions != nil {
+		args = append(args, fmt.Sprintf("--auto-discover-databases-limit=%d", exporter.PostgreSQLOptions.AutoDiscoveryLimit))
 	}
 
 	if pointer.GetString(exporter.MetricsPath) != "" {

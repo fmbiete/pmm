@@ -17,6 +17,8 @@ message UniversalAgent {
     string tls_cert = 2;
     // True if TLS key is set.
     bool is_tls_key_set = 3;
+    // Limit for auto discovery.
+    int32 auto_discovery_limit = 4;
   }
 
   message AzureOptions {
