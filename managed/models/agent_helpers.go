@@ -54,18 +54,25 @@ type PostgreSQLOptionsParams interface {
 	GetTlsCa() string
 	GetTlsCert() string
 	GetTlsKey() string
+}
+
+// PostgreSQLExtendedOptionsParams contains extended parameters for PostgreSQL exporter.
+type PostgreSQLExtendedOptionsParams interface {
 	GetAutoDiscoveryLimit() int32
 }
 
 // PostgreSQLOptionsFromRequest creates PostgreSQLOptions object from request.
 func PostgreSQLOptionsFromRequest(params PostgreSQLOptionsParams) *PostgreSQLOptions {
-	res := &PostgreSQLOptions{
-		AutoDiscoveryLimit: params.GetAutoDiscoveryLimit(),
-	}
+	res := new(PostgreSQLOptions)
 	if params.GetTlsCa() != "" || params.GetTlsCert() != "" || params.GetTlsKey() != "" {
 		res.SSLCa = params.GetTlsCa()
 		res.SSLCert = params.GetTlsCert()
 		res.SSLKey = params.GetTlsKey()
+	}
+
+	// PostgreSQL exporter has these parameters but they are not needed for QAN agent.
+	if extendedOptions, ok := params.(PostgreSQLExtendedOptionsParams); ok && extendedOptions != nil {
+		res.AutoDiscoveryLimit = extendedOptions.GetAutoDiscoveryLimit()
 	}
 
 	return res
